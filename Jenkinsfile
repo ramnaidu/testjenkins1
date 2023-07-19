@@ -21,6 +21,7 @@ pipeline {
                 echo "Testing.."
                 sh '''
                 python3 helloworld.py
+                pytest --version
                 '''
             }
         }
