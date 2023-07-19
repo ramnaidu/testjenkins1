@@ -32,15 +32,17 @@ pipeline {
                 '''
             }
         }
-        stage('Log1'){
+        stage('Logging'){
             parallel{
-                steps{
-                    echo "this is log1"
+                stage('Log1'){
+                    steps{
+                        echo "this is log1"
+                    }
                 }
-            }
-        stage('Log2'){
-                steps{
-                    echo 'this is log2'
+                stage('Log2'){
+                    steps{
+                        echo 'this is log2'
+                    }
                 }
             }
         }
