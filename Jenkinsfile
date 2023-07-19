@@ -21,7 +21,6 @@ pipeline {
                 echo "Testing.."
                 sh '''
                 python3 helloworld.py
-                pytest --version
                 '''
             }
         }
@@ -31,6 +30,18 @@ pipeline {
                 sh '''
                 echo "doing delivery stuff.."
                 '''
+            }
+        }
+        stage('Log1'){
+            parallel{
+                steps{
+                    echo "this is log1"
+                }
+            }
+        stage('Log2'){
+                steps{
+                    echo 'this is log2'
+                }
             }
         }
     }
