@@ -4,4 +4,5 @@ print(string)
 ls = ["welcome","to","jenkins"]
 for i in ls:
   print(i+" ")
-print("Ram Naidu")
+print("Ram Naidu AWS")
+print("Ram Naidu Azure")
