@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    parameters {
+        string(name: 'tag', defaultValue: '', description: 'Tag to build')
+        choice(choices: ['dev', 'test', 'staging', 'qastaging', 'security', 'performance', 'uat', "exploratory", 'pre-production', 'production'],description: 'Run Test on which environment?', name: 'environment')
+    }
     stages {
         stage('Build') {
             steps {
