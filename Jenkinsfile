@@ -30,6 +30,9 @@ pipeline {
             }
         }
         stage('Logging'){
+            when {
+                expression { params.environment == 'qastaging' }
+            }
             parallel{
                 stage('Log1'){
                     steps{
