@@ -6,5 +6,4 @@ for i in ls:
   print(i+" ")
 print("Ram Naidu AWS")
 print("Ram Naidu Azure")
-print("ting tong")
-print("ding dong")
+print("Multi branch pipeline test")
